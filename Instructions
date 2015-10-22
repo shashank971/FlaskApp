@@ -1,0 +1,12 @@
+Instructions to run the app:
+
+1) Create a folder where you want to place the given flask files.
+2) Copy and Paste the "setup.sh" file inside this folder.
+3) Run the "setup.sh" file using - "bash setup.sh"
+4) A virtual python environment will be created within a folder named "flask"
+5) cd to the "flask" folder. 
+6) Copy & Paste the flask files given here(inside the flask folder).
+7) From within the "flask" folder activate the virtual environment using : ". bin/activate"
+8) cd into the flask folder pasted here i.e " cd app"
+9) If everything is successful, then run the flask app with this command : "python runserver.py"
+10) The app can be checked on a web browser. Point the url to : "localhost:5000"

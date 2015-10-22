@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Modify the Profile<h2>
+    <h3>Modify {{ session['username'].title() }}'s profile. Currently, password can't be changed/modified !<h3>
+    <h4> If no change needed, rewrite the old values.<h4>
+   
+  	{% for message in form.homefolder.errors %}
+   		<div class="flash">{{ message }}</div>
+  	{% endfor %}
+   
+  	{% for message in form.shelltype.errors %}
+    	<div class="flash">{{ message }}</div>
+  	{% endfor %}
+   
+  	{% for message in form.sudopr.errors %}
+    	<div class="flash">{{ message }}</div>
+  	{% endfor %}
+
+    <form action="{{ url_for('modify') }}" method=post>
+    {{ form.hidden_tag() }}
+     
+    {{ form.homefolder.label }}
+    {{ form.homefolder }}
+     
+    {{ form.shelltype.label }}
+    {{ form.shelltype }}
+    
+    {{ form.sudopr.label }}
+    {{ form.sudopr }}
+
+    {{ form.submit }}
+  </form>
+  </div>
+{% endblock %}
